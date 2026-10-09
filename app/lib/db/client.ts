@@ -14,7 +14,6 @@ export const DATABASE_PATH =
   process.env.DATABASE_PATH ?? path.join(DATA_DIR, 'app.db');
 
 declare global {
-  // eslint-disable-next-line no-var
   var __aiStartupDb: DatabaseSync | undefined;
 }
 

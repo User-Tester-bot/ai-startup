@@ -1,10 +1,12 @@
 import Image from 'next/image';
 // UI
 import {
-  Button,
   ButtonColor,
+  LinkButton,
   UIComponentSize,
 } from '@/app/ui';
+// Constants
+import { ROUTES } from '@/app/constants';
 // Images
 import HeroshotIllustration from '@/app/(pages)/(HomePage)/components/Heroshot/images/heroshot-illustration.png';
 // Styles
@@ -32,13 +34,14 @@ export const Heroshot = () => {
             technology meets user-friendly SEO tools.
           </p>
 
-          <Button
+          <LinkButton
+            href={ROUTES.SIGNUP}
             color={ButtonColor.White}
             size={UIComponentSize.Large}
             outerBorder
           >
             Start for free
-          </Button>
+          </LinkButton>
         </div>
       </div>
 
