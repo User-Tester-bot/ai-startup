@@ -1,0 +1,96 @@
+.root {
+  @apply mx-auto flex w-full max-w-[1100px] flex-col gap-[28px] p-[20px];
+  @apply tablet:p-[32px];
+}
+
+.header {
+  @apply flex flex-col gap-[16px];
+
+  @apply tablet:flex-row tablet:items-center tablet:justify-between;
+}
+
+.title {
+  @apply text-[26px] font-semibold text-white;
+}
+
+.subtitle {
+  @apply mt-[6px] max-w-[560px] text-[14px]/[22px] text-white text-opacity-60;
+}
+
+.stats {
+  @apply grid grid-cols-1 gap-[14px];
+
+  @apply tablet:grid-cols-3;
+}
+
+.statCard {
+  @apply flex flex-col gap-[6px] rounded-2xl p-[18px];
+  @apply border border-white border-opacity-10;
+  @apply bg-white bg-opacity-[0.03];
+}
+
+.statValue {
+  @apply text-[22px] font-semibold text-white;
+}
+
+.statLabel {
+  @apply text-[12px] uppercase tracking-wide text-white text-opacity-50;
+}
+
+.panels {
+  @apply grid grid-cols-1 gap-[18px];
+
+  @apply desktop:grid-cols-2;
+}
+
+.panel {
+  @apply flex flex-col gap-[14px] rounded-2xl p-[18px];
+  @apply border border-white border-opacity-10;
+  @apply bg-white bg-opacity-[0.02];
+}
+
+.panelHeader {
+  @apply flex flex-row items-center justify-between;
+}
+
+.panelTitle {
+  @apply text-[15px] font-semibold text-white;
+}
+
+.panelLink {
+  @apply text-[13px] text-brand-200 transition-opacity duration-200 hover:opacity-80;
+}
+
+.empty {
+  @apply text-[14px] text-white text-opacity-50;
+}
+
+.list {
+  @apply flex flex-col gap-[6px];
+}
+
+.listItem {
+  @apply flex flex-row items-center justify-between gap-[12px] rounded-xl;
+  @apply px-[12px] py-[10px];
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:bg-white hover:bg-opacity-5;
+}
+
+.listTitle {
+  @apply truncate text-[14px] text-white text-opacity-90;
+}
+
+.listMeta {
+  @apply shrink-0 text-[12px] text-white text-opacity-40;
+}
+
+.prompts {
+  @apply flex flex-col gap-[8px];
+}
+
+.prompt {
+  @apply block rounded-xl border border-white border-opacity-10;
+  @apply px-[12px] py-[10px] text-[14px] text-white text-opacity-80;
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:border-brand-300 hover:text-opacity-100;
+}

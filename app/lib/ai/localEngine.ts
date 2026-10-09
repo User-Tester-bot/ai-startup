@@ -10,6 +10,7 @@ const FILLER_WORDS = new Set([
   'about', 'my', 'our', 'your', 'please', 'write', 'create', 'generate',
   'help', 'me', 'make', 'give', 'some', 'a', 'blog', 'post', 'article',
   'seo', 'keyword', 'content', 'page', 'website', 'site',
+  'plan', 'strategy', 'ideas', 'list', 'tips',
 ]);
 
 const titleCase = (value: string): string =>

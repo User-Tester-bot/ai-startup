@@ -27,3 +27,11 @@
   @apply transition-all duration-200 ease-in-out;
   @apply tablet:gap-[10px];
 }
+
+.signInLink {
+  @apply hidden px-[8px] py-[6px] rounded-lg;
+  @apply text-[14px] font-normal text-white text-opacity-80;
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:text-opacity-100 hover:bg-white hover:bg-opacity-5;
+  @apply tablet:block;
+}

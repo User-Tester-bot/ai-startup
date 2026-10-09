@@ -3,11 +3,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import clsx from 'clsx';
-// Components
-import { Header, Footer } from '@/app/components/common';
 // Styles
 import '@/app/styles/global.scss';
-import styles from '@/app/layout.module.scss';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -49,12 +46,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.variable, styles.root)}>
-        <Header className={styles.header}/>
-
-        <main className={styles.content}>{children}</main>
-
-        <Footer className={styles.footer}/>
+      <body className={clsx(inter.variable)}>
+        {children}
 
         <ToastContainer />
       </body>

@@ -1,0 +1,11 @@
+.root {
+  @apply grid min-h-screen grid-cols-1;
+  @apply bg-brand-900;
+  grid-template-rows: auto 1fr;
+
+  @apply desktop:grid-cols-[260px_1fr] desktop:grid-rows-1;
+}
+
+.content {
+  @apply w-full min-w-0;
+}

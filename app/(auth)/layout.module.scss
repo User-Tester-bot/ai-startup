@@ -1,0 +1,18 @@
+.root {
+  @apply relative grid min-h-screen place-items-center gap-[24px];
+  @apply overflow-hidden bg-brand-900 px-[20px] py-[48px];
+}
+
+.glow {
+  @apply pointer-events-none absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2;
+  @apply rounded-full opacity-40 blur-[120px];
+  background: radial-gradient(circle, #8c45ff 0%, transparent 70%);
+}
+
+.logoWrapper {
+  @apply relative z-10 flex flex-row items-center gap-[10px];
+}
+
+.logoText {
+  @apply text-[18px] font-semibold text-white;
+}

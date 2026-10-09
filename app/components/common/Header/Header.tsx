@@ -6,7 +6,7 @@ import clsx from 'clsx';
 // Constants
 import { ROUTES } from '@/app/constants';
 // Ui
-import { Button, ButtonColor, UIComponentSize } from '@/app/ui';
+import { ButtonColor, LinkButton, UIComponentSize } from '@/app/ui';
 // Images
 import LogoImage from '@/app/components/common/Header/logo.png';
 // Components
@@ -69,12 +69,10 @@ const navItems: NavItem[] = [
 
 type HeaderProps = {
   className?: string;
+  isAuthenticated?: boolean;
 };
 
-export const Header = ({ className }: HeaderProps) => {
-  const handleJoinWaitlistCtaClick = () => {
-    console.log('Join waitlist clicked');
-  }
+export const Header = ({ className, isAuthenticated = false }: HeaderProps) => {
 
   return (
     <header className={clsx(styles.root, className)}>
@@ -98,14 +96,31 @@ export const Header = ({ className }: HeaderProps) => {
         <DesktopMenu items={navItems}/>
 
         <div className={styles.rightMenuWrapper}>
-          <Button
-            onClick={handleJoinWaitlistCtaClick}
-            size={UIComponentSize.Small}
-            color={ButtonColor.Purple}
-            outerBorderBold
-          >
-            Join waitlist
-          </Button>
+          {isAuthenticated ? (
+            <LinkButton
+              href={ROUTES.DASHBOARD}
+              size={UIComponentSize.Small}
+              color={ButtonColor.Purple}
+              outerBorderBold
+            >
+              Dashboard
+            </LinkButton>
+          ) : (
+            <>
+              <Link className={styles.signInLink} href={ROUTES.LOGIN}>
+                Sign in
+              </Link>
+
+              <LinkButton
+                href={ROUTES.SIGNUP}
+                size={UIComponentSize.Small}
+                color={ButtonColor.Purple}
+                outerBorderBold
+              >
+                Get started
+              </LinkButton>
+            </>
+          )}
 
           <MobileMenu items={navItems}/>
         </div>

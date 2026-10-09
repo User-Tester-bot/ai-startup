@@ -1,0 +1,66 @@
+.root {
+  @apply w-full max-w-[420px];
+  @apply flex flex-col gap-[24px];
+  @apply rounded-2xl border border-white border-opacity-10;
+  @apply bg-white bg-opacity-[0.03] p-[28px];
+  @apply backdrop-filter backdrop-blur-lg;
+}
+
+.header {
+  @apply flex flex-col gap-[6px] text-center;
+}
+
+.title {
+  @apply text-[26px] font-semibold text-white;
+}
+
+.subtitle {
+  @apply text-[14px]/[22px] text-white text-opacity-60;
+}
+
+.form {
+  @apply flex flex-col gap-[16px];
+}
+
+.field {
+  @apply flex flex-col gap-[6px];
+}
+
+.label {
+  @apply text-[13px] font-medium text-white text-opacity-80;
+}
+
+.input {
+  @apply w-full rounded-[10px];
+  @apply border border-white border-opacity-15 bg-brand-900 bg-opacity-60;
+  @apply px-[14px] py-[10px];
+  @apply text-[15px] text-white placeholder:text-white placeholder:text-opacity-30;
+  @apply transition-all duration-200 ease-in-out;
+  @apply focus:outline-none focus:border-brand-300 focus:ring-2 focus:ring-brand-300 focus:ring-opacity-40;
+
+  &.inputError {
+    @apply border-red-400 border-opacity-70;
+  }
+}
+
+.fieldError {
+  @apply text-[12px] text-red-300;
+}
+
+.message {
+  @apply rounded-lg border border-red-400 border-opacity-30;
+  @apply bg-red-500 bg-opacity-10 px-[12px] py-[8px];
+  @apply text-[13px] text-red-200;
+}
+
+.submit {
+  @apply mt-[4px];
+}
+
+.footer {
+  @apply text-center text-[13px] text-white text-opacity-60;
+}
+
+.footerLink {
+  @apply text-brand-200 transition-opacity duration-200 hover:opacity-80;
+}
