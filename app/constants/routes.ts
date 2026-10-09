@@ -1,5 +1,11 @@
 export const ROUTES = {
   HOME: '/',
+  // Product app
+  LOGIN: '/login',
+  SIGNUP: '/signup',
+  DASHBOARD: '/dashboard',
+  ASSISTANT: '/dashboard/assistant',
+  // Marketing
   FEATURES: '/features',
   ONECLICK: '/oneclick',
   LIFESTYLE_DATA: '/lifestyle-data',

@@ -13,12 +13,19 @@
 # testing
 /coverage
 
+# local database (sqlite)
+/.data/
+
 # next.js
 /.next/
 /out/
 
 # production
 /build
+
+# npm lockfile (project uses pnpm)
+/package-lock.json
+
 
 # misc
 .DS_Store
